@@ -4,7 +4,7 @@
 * **Analyste :** Yassir Nacir
 * **APK analysé :** vulnbank3.apk (SHA-256: b9f87d81498671560e6c083a354aac35fd8407d0f63457f71a9b37b04ee97a827)
 * **Version :** Non disponible
-* **Outils utilisés :** MobSF (version non disponible) dans VM Mobexler v4.4.5
+* **Outils utilisés :**  VM Mobexler(version non disponible) et MobSF v4.0.6
 
 ---
 
@@ -82,11 +82,10 @@ Le score de sécurité global est faible (37/100), indiquant un niveau de risque
 
 ## Autres observations
 
-* Application installable sur Android 7.0 (systèmes vulnérables) → MSTG-PLATFORM-1
-* Backup activé (android:allowBackup=true) → MSTG-STORAGE-1
-* Broadcast Receiver exporté → MSTG-PLATFORM-2
-* Données sensibles potentiellement loggées → MSTG-STORAGE-3
-* Endpoint de debug exposé : http://192.168.18.5:5000/debug/users
+* Application installable sur Android 7.0 (systèmes vulnérables) - MSTG-PLATFORM-1
+* Backup activé (android:allowBackup=true) - MSTG-STORAGE-1
+* Broadcast Receiver exporté - MSTG-PLATFORM-2
+* Données sensibles potentiellement loggées - MSTG-STORAGE-3
 * Absence de configuration réseau sécurisée
 
 ---
@@ -95,7 +94,7 @@ Le score de sécurité global est faible (37/100), indiquant un niveau de risque
 
 1. Désactiver le trafic en clair et imposer HTTPS
 2. Supprimer tous les secrets du code source
-3. Corriger les requêtes SQL (requêtes préparées)
+3. Corriger les requêtes SQL
 4. Signer l’application avec un certificat de production sécurisé
 5. Désactiver allowBackup et sécuriser les composants exportés
 
